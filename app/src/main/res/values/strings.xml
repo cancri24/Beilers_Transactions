@@ -3,4 +3,11 @@
     <string name="order_new">NEW ORDER</string>
     <string name="order_finalize">FINALIZE ORDER</string>
     <string name="order_cancel">CANCEL ORDER</string>
+
+    <string name="glaze">Glaze</string>
+    <string name="icing">Icing</string>
+    <string name="powder">Powder</string>
+    <string name="drizzle">Drizzle</string>
+    <string name="specialTopping">Special Topping</string>
+    <string name="filling">Créme Filling</string>
 </resources>
