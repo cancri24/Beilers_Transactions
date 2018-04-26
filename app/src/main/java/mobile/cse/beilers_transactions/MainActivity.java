@@ -2,15 +2,19 @@ package mobile.cse.beilers_transactions;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView simpleList;
     String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
+
+    int donutCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         CheckBox specialTopping = (CheckBox) findViewById(R.id.specialTopping);
         CheckBox filling = (CheckBox) findViewById(R.id.filling);
 
-        Button orderButton = (Button) findViewById(R.id.orderButton);
+    }
+
+    public void onDonutOrdered(View view) {
+        TextView orderList = (TextView) findViewById(R.id.orderList);
+        donutCounter++;
+        orderList.setText("Everything Donut (" + donutCounter + ")");
     }
 }
