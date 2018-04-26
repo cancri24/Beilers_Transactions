@@ -2,10 +2,15 @@ package mobile.cse.beilers_transactions;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    ListView simpleList;
+    String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,9 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout attributeList = (LinearLayout) findViewById(R.id.attributeList);
 
-
-        CheckBox test = new CheckBox(this);
-        /*
         CheckBox glaze = (CheckBox) findViewById(R.id.glaze);
         CheckBox icing = (CheckBox) findViewById(R.id.icing);
         CheckBox powder = (CheckBox) findViewById(R.id.powder);
@@ -24,14 +26,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox specialTopping = (CheckBox) findViewById(R.id.specialTopping);
         CheckBox filling = (CheckBox) findViewById(R.id.filling);
 
-        attributeList.addView(glaze);
-        attributeList.addView(icing);
-        attributeList.addView(powder);
-        attributeList.addView(drizzle);
-        attributeList.addView(specialTopping);
-        attributeList.addView(filling);
-        */
-        attributeList.addView(test);
-
+        Button orderButton = (Button) findViewById(R.id.orderButton);
     }
 }
