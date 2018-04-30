@@ -32,6 +32,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onCheckBoxesClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.glaze:
+                if (checked)
+                    //Person selected
+     //               donutType = "glaze";
+                break;
+            case R.id.icing:
+                if (checked)
+                    //Item Selected
+       //             donutType = "icing";
+                break;
+            case R.id.powder:
+                if(checked)
+                    //Both selected
+         //           donutType  = "powder";
+                break;
+            case R.id.drizzle:
+                if (checked)
+                    //Item Selected
+          //          donutType  = "drizzle";
+                break;
+            case R.id.specialTopping:
+                if (checked)
+                    //Item Selected
+          //          donutType  = "specialTopping";
+                break;
+            case R.id.filling:
+                if (checked)
+                    //Item Selected
+         //           donutType  = "filling";
+                break;
+        }
+    }
+
     public void onDonutOrdered(View view) {
         TextView orderList = (TextView) findViewById(R.id.orderList);
         donutCounter++;
