@@ -91,18 +91,41 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <!--<LinearLayout
+        <LinearLayout
             android:id="@+id/donutList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        </LinearLayout>-->
-        <Button
-            android:id="@+id/everything_donut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onDonutOrdered"
-            android:text="Everything Donut" />
+            <LinearLayout
+                android:id="@+id/everythingdonut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Everything Donut"
+                    android:textColor="@android:color/background_light" />
+
+                <Button
+                    android:id="@+id/everything_donut1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="onDonutOrdered"
+                    android:text="+1" />
+
+                <Button
+                    android:id="@+id/everything_donut6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="onDonutOrdered"
+                    android:text="+6" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </ScrollView>
 
     <ScrollView
@@ -120,17 +143,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <!--<LinearLayout
-            android:id="@+id/orderList"
+        <LinearLayout
+            android:id="@+id/orderListLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        </LinearLayout>-->
-        <TextView
-            android:id="@+id/orderList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/background_light" />
+                <TextView
+                android:id="@+id/orderList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -3,7 +3,6 @@ package mobile.cse.beilers_transactions;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -14,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     ListView simpleList;
     String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
 
-    int donutCounter = 0;
+    int everythingDonutCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +71,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onDonutOrdered(View view) {
+        String viewId = view.getResources().getResourceName(view.getId());;
+        if(viewId.substring(viewId.length()-1).equals("1")) everythingDonutCounter++;
+        else if(viewId.substring(viewId.length()-1).equals("6")) everythingDonutCounter += 6;
         TextView orderList = (TextView) findViewById(R.id.orderList);
-        donutCounter++;
-        orderList.setText("Everything Donut (" + donutCounter + ")");
+        orderList.setText("Everything Donut (" + everythingDonutCounter + ")");
     }
 }
