@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView simpleList;
     String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
 
     int everythingDonutCounter = 0;
@@ -20,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* may not end up using this
         LinearLayout attributeList = (LinearLayout) findViewById(R.id.attributeList);
 
         CheckBox glaze = (CheckBox) findViewById(R.id.glaze);
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox powder = (CheckBox) findViewById(R.id.powder);
         CheckBox drizzle = (CheckBox) findViewById(R.id.drizzle);
         CheckBox specialTopping = (CheckBox) findViewById(R.id.specialTopping);
-        CheckBox filling = (CheckBox) findViewById(R.id.filling);
+        CheckBox filling = (CheckBox) findViewById(R.id.filling); */
 
     }
 
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onDonutOrdered(View view) {
-        String viewId = view.getResources().getResourceName(view.getId());;
+        String viewId = view.getResources().getResourceName(view.getId());
         if(viewId.substring(viewId.length()-1).equals("1")) everythingDonutCounter++;
         else if(viewId.substring(viewId.length()-1).equals("6")) everythingDonutCounter += 6;
         TextView orderList = (TextView) findViewById(R.id.orderList);
