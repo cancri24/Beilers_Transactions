@@ -21,7 +21,15 @@ public class Donut {
     private int quantity;
     private String name;
 
-    Donut(String dname, String id, Context mainact) {
+    private boolean glaze;
+    private boolean icing;
+    private boolean powder;
+    private boolean drizzle;
+    private boolean specialTopping;
+    private boolean filling;
+    private boolean[] attributes = {glaze, icing, powder, drizzle, specialTopping, filling};
+
+    Donut(String dname, String id, Context mainact, boolean[] attributeList) {
         name = dname;
 
         //TODO: set id of all this stuff somehow (is this necessary?)
@@ -64,18 +72,24 @@ public class Donut {
         donutOrderLayout.addView(donutOrderName);
         donutOrderLayout.addView(removeAll);
 
-        //TODO: code for setting donut attributes
+        attributes = attributeList;
     }
 
     public View getListLayout() {
         return donutListLayout;
     }
-
     public View getOrderLayout() {
         return donutOrderLayout;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void hideList() {
+        donutListLayout.setVisibility(View.GONE);
+    }
+    public void showList() {
+        donutListLayout.setVisibility(View.VISIBLE);
     }
 }

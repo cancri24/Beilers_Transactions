@@ -1,0 +1,11 @@
+<resources>
+    <string name="everything_name">Everything Donut</string>
+    <array name="everything_attributes">
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+</resources>
