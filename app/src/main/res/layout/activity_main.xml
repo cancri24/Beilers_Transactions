@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/glaze"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
 
         <CheckBox
             android:id="@+id/icing"
@@ -45,7 +46,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/icing"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
 
         <CheckBox
             android:id="@+id/powder"
@@ -53,7 +55,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/powder"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
 
         <CheckBox
             android:id="@+id/drizzle"
@@ -61,7 +64,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/drizzle"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
 
         <CheckBox
             android:id="@+id/specialTopping"
@@ -69,7 +73,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/specialTopping"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
 
         <CheckBox
             android:id="@+id/filling"
@@ -77,7 +82,8 @@
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/background_light"
             android:text="@string/filling"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="onCheckBoxesClicked" />
     </LinearLayout>
 
     <ScrollView
@@ -95,36 +101,7 @@
             android:id="@+id/donutList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/everythingdonut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Everything Donut"
-                    android:textColor="@android:color/background_light" />
-
-                <Button
-                    android:id="@+id/everything_donut1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:onClick="onDonutOrdered"
-                    android:text="+1" />
-
-                <Button
-                    android:id="@+id/everything_donut6"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:onClick="onDonutOrdered"
-                    android:text="+6" />
-
-            </LinearLayout>
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
     </ScrollView>
 

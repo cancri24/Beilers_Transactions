@@ -7,9 +7,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+//TODO: Fix button sizes on plusOne, plusSix, and removeAll
+
 public class Donut {
     private LinearLayout donutListLayout;
     private LinearLayout donutOrderLayout;
+
+    private LinearLayout orderListLayout;
 
     private TextView donutName;
     private TextView donutOrderName;
@@ -20,19 +24,12 @@ public class Donut {
 
     private int quantity;
     private String name;
+    private boolean[] attributes;
 
-    private boolean glaze;
-    private boolean icing;
-    private boolean powder;
-    private boolean drizzle;
-    private boolean specialTopping;
-    private boolean filling;
-    private boolean[] attributes = {glaze, icing, powder, drizzle, specialTopping, filling};
-
-    Donut(String dname, String id, Context mainact, boolean[] attributeList) {
+    Donut(String dname, Context mainact, boolean[] attributeList, LinearLayout oList) {
         name = dname;
+        orderListLayout = oList;
 
-        //TODO: set id of all this stuff somehow (is this necessary?)
         //Create ListLayout and everything in it
         donutListLayout = new LinearLayout(mainact);
         donutListLayout.setOrientation(LinearLayout.HORIZONTAL);
@@ -42,14 +39,30 @@ public class Donut {
         donutName.setText(name);
 
         plusOne = new Button(mainact);
-        plusOne.setWidth(400);
-        plusOne.setHeight(400);
+        plusOne.setWidth(40);
+        plusOne.setHeight(40);
         plusOne.setText("+1");
+        plusOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(quantity == 0) orderListLayout.addView(donutOrderLayout);
+                quantity++;
+                donutOrderName.setText(name + " (" + quantity + ")");
+            }
+        });
 
         plusSix = new Button(mainact);
-        plusSix.setWidth(400);
-        plusSix.setHeight(400);
+        plusSix.setWidth(40);
+        plusSix.setHeight(40);
         plusSix.setText("+6");
+        plusSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(quantity == 0) orderListLayout.addView(donutOrderLayout);
+                quantity += 6;
+                donutOrderName.setText(name + " (" + quantity + ")");
+            }
+        });
 
         donutListLayout.addView(donutName);
         donutListLayout.addView(plusOne);
@@ -65,9 +78,17 @@ public class Donut {
         donutOrderName.setText(name + " (" + quantity + ")");
 
         removeAll = new Button(mainact);
-        removeAll.setWidth(400);
-        plusOne.setHeight(400);
-        plusOne.setText("X");
+        removeAll.setWidth(40);
+        removeAll.setHeight(40);
+        removeAll.setText("X");
+        removeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quantity = 0;
+                donutOrderName.setText(name + " (" + quantity + ")");
+                orderListLayout.removeView(donutOrderLayout);
+            }
+        });
 
         donutOrderLayout.addView(donutOrderName);
         donutOrderLayout.addView(removeAll);
