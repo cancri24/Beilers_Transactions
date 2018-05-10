@@ -1,13 +1,491 @@
 <resources>
-    <string name="everything_name">Everything Donut</string>
-    <string-array name="everything_attributes">
+    <string name="AppleFrit_name">Apple Fritter</string>
+    <array name="AppleFritter">
         <item>true</item>
-        <item>true</item>
-        <item>true</item>
-        <item>true</item>
-        <item>true</item>
-        <item>true</item>
-    </string-array>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
 
+    <string name="BananaCreme_name">Banana Creme</string>
+    <array name="BananaCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
 
+    <string name="Bismark_name">Bismark</string>
+    <array name="Bismark">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="BostonCreme_name">Boston Creme</string>
+    <array name="BostonCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="BlueberryFrit_name">Blueberry Fritter</string>
+    <array name="BlueberryFritter">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="CaramelApple_name">Caramel Apple</string>
+    <array name="CaramelApple">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="CaramelCake_name">Caramel Cake</string>
+    <array name="CaramelCake">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="ChocDippedCake_name">Chocolate Dipped Cake</string>
+    <array name="ChocolateDippedCake">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="MMsChocDippedCake">MMs Chocolate Dipped Cake</string>
+    <array name="MMsChocDippedCake">
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="ChocolateCake">Chocolate Cake</string>
+    <array name="ChocolateCake">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="ChocolateIced">Chocolate Iced</string>
+    <array name="ChocolateIced">
+        <item>true</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="ChocolateMousse">Chocolate Mousse</string>
+    <array name="ChocolateMousse">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="ChocolateSprinkles">Chocolate Sprinkles</string>
+    <array name="ChocolateSprinkles">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="CinnamonSugared">Cinnamon Sugared</string>
+    <array name="CinnamonSugared">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="CinnamonSugarCake">Cinnamon Sugar Cake</string>
+    <array name="CinnamonSugarCake">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="ChocolateCoconutIced">Chocolate Coconut Iced</string>
+    <array name="ChocolateCoconutIced">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="VanillaCoconutIced">Vanilla Coconut Iced</string>
+    <array name="VanillaCoconutIced">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="CoconutCustard">Coconut Custard</string>
+    <array name="CoconutCustard">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="CremeFilledPowdered">Creme Filled Powdered</string>
+    <array name="CremeFilledPowdered">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="GlazedCremeFilled">Glazed Creme Filled</string>
+    <array name="GlazedCremeFilled">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="DreamCreme">Dream Creme</string>
+    <array name="Dream Creme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="DutchCrumb">Dutch Crumb</string>
+    <array name="DutchCrumb">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="ElvisDelight">Elvis Delight</string>
+    <array name="ElvisDelight">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="VanillaFruityPebbles">Vanilla Fruity Pebbles</string>
+    <array name="VanillaFruityPebbles">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="ChocolateFruityPebbles">Chocolate Fruity Pebbles</string>
+    <array name="ChocolateFruityPebbles">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="Glazed">Glazed</string>
+    <array name="Glazed">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="GlazedCake">Glazed Cake</string>
+    <array name="GlazedCake">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="HarvestApple">Harvest Apple</string>
+    <array name="HarvestApple">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="LemonCreme">Lemon Creme</string>
+    <array name="LemonCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="MapleBacon">Maple Bacon</string>
+    <array name="MapleBacon">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="KeyLime">KeyLime</string>
+    <array name="KeyLime">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="MapleNutCreme">Maple Nut Creme</string>
+    <array name="MapleNutCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="MochaCreme">Mocha Creme</string>
+    <array name="MochaCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="NutellaCreme">Nutella Creme</string>
+    <array name="NutellaCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="OreoCreme">Oreo Creme</string>
+    <array name="OreoCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="PeanutButterJelly">Peanut Butter Jelly</string>
+    <array name="PeanutButterJelly">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="PeanutButterChocolate">Peanut Butter Chocolate</string>
+    <array name="PeanutButterChocolate">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="PeanutButterCreme">Peanut Butter Creme</string>
+    <array name="PeanutButterCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="OldFashioned">Old Fashioned</string>
+    <array name="OldFashioned">
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="Powdered">Powdered</string>
+    <array name="Powdered">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="PumpkinCreme">Pumpkin Creme</string>
+    <array name="PumpkinCreme">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="Smores">Smores</string>
+    <array name="Smores">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="SaltyCaramel">Salty Caramel</string>
+    <array name="SaltyCaramel">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>true</item>
+    </array>
+
+    <string name="StrawberryFilled">Strawberry Filled</string>
+    <array name="StrawberryFilled">
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="StrawberryGlazed">Strawberry Glazed</string>
+    <array name="StrawberryGlazed">
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+    </array>
+
+    <string name="TripleChocolate">Triple Chocolate</string>
+    <array name="TripleChocolate">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+
+    <string name="VanillaIced">Vanilla Iced</string>
+    <array name="VanillaIced">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </array>
+
+    <string name="MMsVanillaIced">MMs Vanilla Iced</string>
+    <array name="MMsVanillaIced">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+    <string name="VanillaSprinkles">Vanilla Sprinkles</string>
+    <array name="VanillaSprinkles">
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+        <item>false</item>
+        <item>true</item>
+        <item>false</item>
+    </array>
+    <!--glaze, icing, powder, drizzle, specialTopping, filling-->
 </resources>
