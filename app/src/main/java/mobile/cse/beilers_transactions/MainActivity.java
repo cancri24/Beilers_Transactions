@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
     Donut[] donuts;
-    int everythingDonutCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         CheckBox filling = (CheckBox) findViewById(R.id.filling); */
 
         LinearLayout orderListLayout = findViewById(R.id.orderListLayout);
-        LinearLayout donutList = (LinearLayout) findViewById(R.id.donutList);
+        LinearLayout donutList = findViewById(R.id.donutList);
 
         //Creates Everything Donut using Donut class
-        String[] everyAtt = getResources().getStringArray(R.array.everything_attributes);
+        String[] everyAtt = getResources().getStringArray(R.array.Everything);
         boolean[] attList = new boolean[everyAtt.length];
         for(int i = 0; i < attList.length; i++) attList[i] = (everyAtt[i].equals("true"));
-        String name = getResources().getString(R.string.everything_name);
+        String name = getResources().getString(R.string.Everything_name);
         Donut everything = new Donut(name, this, attList, orderListLayout);
         donutList.addView(everything.getListLayout());
     }
@@ -76,13 +74,5 @@ public class MainActivity extends AppCompatActivity {
          //           donutType  = "filling";
                 break;
         }
-    }
-
-    public void onDonutOrdered(View view) {
-        String viewId = view.getResources().getResourceName(view.getId());
-        if(viewId.substring(viewId.length()-1).equals("1")) everythingDonutCounter++;
-        else if(viewId.substring(viewId.length()-1).equals("6")) everythingDonutCounter += 6;
-        TextView orderList = findViewById(R.id.orderList);
-        orderList.setText("Everything Donut (" + everythingDonutCounter + ")");
     }
 }
