@@ -3,6 +3,7 @@ package mobile.cse.beilers_transactions;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -39,8 +40,7 @@ public class Donut {
         donutName.setText(name);
 
         plusOne = new Button(mainact);
-        plusOne.setWidth(40);
-        plusOne.setHeight(40);
+        plusOne.setLayoutParams(new ViewGroup.LayoutParams(119, 119));
         plusOne.setText("+1");
         plusOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +52,7 @@ public class Donut {
         });
 
         plusSix = new Button(mainact);
-        plusSix.setWidth(40);
-        plusSix.setHeight(40);
+        plusSix.setLayoutParams(new ViewGroup.LayoutParams(119, 119));
         plusSix.setText("+6");
         plusSix.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,8 +77,7 @@ public class Donut {
         donutOrderName.setText(name + " (" + quantity + ")");
 
         removeAll = new Button(mainact);
-        removeAll.setWidth(40);
-        removeAll.setHeight(40);
+        removeAll.setLayoutParams(new ViewGroup.LayoutParams(119, 119));
         removeAll.setText("X");
         removeAll.setOnClickListener(new View.OnClickListener() {
             @Override
