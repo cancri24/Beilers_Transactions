@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i =0 ;i < donuts.length; i++) {
             String packageName = getPackageName();
-            int resId = getResources().getIdentifier(donutNames[i], "string", packageName);
+            int resId = getResources().getIdentifier(donutNames[i]+"_name", "string", packageName);
             String name = getString(resId);
 
-            resId = getResources().getIdentifier(donutNames[i]+"_name", "string-array", packageName);
+            resId = getResources().getIdentifier(donutNames[i], "array", packageName);
             String[] attString = getResources().getStringArray(resId);
 
             boolean attList[] = new boolean[attString.length];
