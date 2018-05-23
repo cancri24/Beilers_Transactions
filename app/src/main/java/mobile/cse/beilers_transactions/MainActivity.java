@@ -7,13 +7,32 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-    String attributes[] = {"glaze", "icing", "powder", "drizzle", "specialTopping", "filling"};
-    Donut[] donuts;
+    //attributes are, in order: glaze, icing, powder, drizzle, specialTopping, & filling
+    boolean attributes[] = {false, false, false, false, false, false};
+    String[] donutNames = {};
+    Donut[] donuts = new Donut[42];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LinearLayout orderListLayout = findViewById(R.id.orderListLayout);
+        LinearLayout donutList = findViewById(R.id.donutList);
+
+        for(int i =0 ;i < donuts.length; i++) {
+            String packageName = getPackageName();
+            int resId = getResources().getIdentifier(donutNames[i], "string", packageName);
+            String name = getString(resId);
+
+            resId = getResources().getIdentifier(donutNames[i]+"_name", "string-array", packageName);
+            String[] attString = getResources().getStringArray(resId);
+
+            boolean attList[] = new boolean[attString.length];
+            for(int j = 0; j < attString.length; j++) attList[j] = (attString[j].equals("true"));
+
+        donuts[i] = new Donut(name, this, attList, ((LinearLayout) orderListLayout));
+    }
 
         /* may not end up using this
         LinearLayout attributeList = (LinearLayout) findViewById(R.id.attributeList);
@@ -24,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox drizzle = (CheckBox) findViewById(R.id.drizzle);
         CheckBox specialTopping = (CheckBox) findViewById(R.id.specialTopping);
         CheckBox filling = (CheckBox) findViewById(R.id.filling); */
-
-        LinearLayout orderListLayout = findViewById(R.id.orderListLayout);
-        LinearLayout donutList = findViewById(R.id.donutList);
 
         //Creates Everything Donut using Donut class
         String[] everyAtt = getResources().getStringArray(R.array.Everything);
@@ -73,6 +89,13 @@ public class MainActivity extends AppCompatActivity {
                     //Item Selected
          //           donutType  = "filling";
                 break;
+        }
+    }
+
+    public void checkDonuts(boolean[] attributes) {
+        for(Donut donut : donuts) {
+            if(donut.shouldAppear(attributes)) donut.showList();
+            else donut.hideList();
         }
     }
 }

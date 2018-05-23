@@ -100,6 +100,9 @@ public class Donut {
     public View getOrderLayout() {
         return donutOrderLayout;
     }
+    public boolean shouldAppear(boolean[] attList) {
+        return (attributes == attList);
+    }
 
     public String getName() {
         return name;
