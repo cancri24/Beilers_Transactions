@@ -9,7 +9,16 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
     //attributes are, in order: glaze, icing, powder, drizzle, specialTopping, & filling
     boolean attributes[] = {false, false, false, false, false, false};
-    String[] donutNames = {};
+    String[] donutNames = {"AppleFritter", "BananaCreme", "Bismark", "BostonCreme", "BlueberryFritter",
+            "CaramelApple", "CaramelCake", "ChocolateDippedCake", "MMsChocolateDippedCake", "ChocolateCake",
+            "ChocolateIced", "ChocolateMousse", "ChocolateSprinkles", "CinnamonSugared", "CinnamonSugarCake",
+            "ChocolateCoconutIced", "VanillaCoconutIced", "CoconutCustard", "CremeFilledPowdered", "GlazedCremeFilled",
+            "DreamCreme", "DutchCrumb", "ElvisDelight", "VanillaFruityPebbles", "ChocolateFruityPebbles",
+            "Glazed", "GlazedCake", "HarvestApple", "LemonCreme", "MapleBacon", "KeyLime", "MapleNutCreme",
+            "MochaCreme", "NutellaCreme", "OreoCreme", "PeanutButterJelly", "PeanutButterChocolate",
+            "PeanutButterCreme", "OldFashioned", "Powdered", "PumpkinCreme", "Smores", "SaltyCaramel",
+            "StrawberryFilled", "StrawberryGlazed", "TripleChocolate", "VanillaIced", "MMsVanillaIced",
+            "VanillaSprinkles"};
     Donut[] donuts = new Donut[49];
 
     @Override
@@ -56,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.glaze:
                 if (checked)
                     //Person selected
-     //               donutType = "glaze";
+      //              donutType = "glaze";
                 break;
             case R.id.icing:
                 if (checked)
