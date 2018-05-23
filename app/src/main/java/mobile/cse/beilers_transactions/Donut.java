@@ -97,11 +97,14 @@ public class Donut {
     public View getListLayout() {
         return donutListLayout;
     }
-    public View getOrderLayout() {
-        return donutOrderLayout;
-    }
     public boolean shouldAppear(boolean[] attList) {
-        return (attributes == attList);
+        for(int i = 0; i < attributes.length; i++) {
+            if(attList[i] == false) /*skip this attribute*/;
+            //else, if the attribute of this donut does not match the attribute being tested for, donut should not appear
+            else if(attributes[i] != attList[i]) return false;
+        }
+        //if this point is reached, donut meets all criteria and should appear
+        return true;
     }
 
     public String getName() {

@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     //attributes are, in order: glaze, icing, powder, drizzle, specialTopping, & filling
     boolean attributes[] = {false, false, false, false, false, false};
     String[] donutNames = {};
-    Donut[] donuts = new Donut[42];
+    Donut[] donuts = new Donut[49];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             for(int j = 0; j < attString.length; j++) attList[j] = (attString[j].equals("true"));
 
         donuts[i] = new Donut(name, this, attList, ((LinearLayout) orderListLayout));
+        donutList.addView(donuts[i].getListLayout());
     }
 
         /* may not end up using this
@@ -44,13 +45,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox specialTopping = (CheckBox) findViewById(R.id.specialTopping);
         CheckBox filling = (CheckBox) findViewById(R.id.filling); */
 
-        //Creates Everything Donut using Donut class
-        String[] everyAtt = getResources().getStringArray(R.array.Everything);
-        boolean[] attList = new boolean[everyAtt.length];
-        for(int i = 0; i < attList.length; i++) attList[i] = (everyAtt[i].equals("true"));
-        String name = getResources().getString(R.string.Everything_name);
-        Donut everything = new Donut(name, this, attList, orderListLayout);
-        donutList.addView(everything.getListLayout());
     }
 
     public void onCheckBoxesClicked(View view) {
